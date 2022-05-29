@@ -1,1 +1,1 @@
-wecool lads
+Fáilte a stór taistealaí :)
