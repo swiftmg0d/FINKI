@@ -1,0 +1,124 @@
+body {
+    background: ghostwhite;
+    zoom: 70%;
+}
+
+#mainContainer {
+    position: relative;
+    top: 30px;
+    width: 1300px;
+    height: 1000px;
+    margin: auto;
+    background-color: #7dde95;
+}
+
+#mNavigation {
+    background-color: white;
+    height: 75px;
+}
+
+#mNavigation ul {
+    position: relative;
+    bottom: 5px;
+    width: 450px;
+
+    display: inline-block;
+
+}
+
+#mNavigation ul li:not(.spaceBetween) {
+    display: inline-block;
+    list-style-type: none;
+    height: 50px;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#mNavigation ul li:not(.spaceBetween) a {
+    position: relative;
+    top: 12px;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.spaceBetween {
+    display: inline-block;
+    list-style-type: none;
+    width: 15px;
+}
+
+#fLogo {
+    display: inline-block;
+    width: 750px;
+    height: 50px;
+}
+
+#fLogo p {
+    position: relative;
+    left: 45px;
+    top: 10px;
+    display: inline;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+#fLogo p a {
+    color: #7dde95;
+}
+
+#leftSide {
+    margin-left: 40px;
+    width: 550px;
+    grid-area: leftSide;
+
+}
+
+#rightSide {
+    width: 550px;
+    grid-area: rightSide;
+
+}
+
+#mSumbit {
+    padding-top: 40px;
+    padding-left: 420px;
+    grid-area: sumbit;
+}
+#iFrames {
+    position: relative;
+    left: 55px;
+    border-radius: 5px 5px 5px 5px;
+    display: grid;
+    grid-template-areas: "leftSide rightSide"
+                         "sumbit sumbit";
+    width: 1200px;
+    height: 500px;
+    background-color: #f1f1f1;
+}
+
+td, tr {
+    border: 1px solid black;
+}
+
+td, th {
+    padding: 2px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr {
+    text-align: center;
+}
+
+#mTable {
+    width: 1200px;
+    left: 52px;
+    position: relative;
+    top: 125px;
+}

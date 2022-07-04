@@ -1,0 +1,43 @@
+
+a.menuIl,a.menuIl:hover,a.menuIl:focus{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    margin-top: 50px;
+}
+
+#navigationBar{
+    height: 30px;
+    color: white;
+    background-image: url("content/img/navigation-background.jpg");
+
+}
+ul{
+    margin-left: 120px;
+    position: relative;
+    top: 5px;
+}
+ul > li{
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline;
+    text-align: center;
+
+}
+#imgLeaf{
+    position: absolute;
+    height: 120px;
+    top: 3px;
+}
+#footer{
+    height: 30px;
+    color: white;
+    background-color: #81b518;
+}
+#footer p{
+    text-align: center;
+    position: relative;
+    top: 5px;
+}
