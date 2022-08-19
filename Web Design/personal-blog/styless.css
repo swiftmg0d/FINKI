@@ -1,0 +1,558 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    zoom: 100%;
+}
+
+.navBar {
+    background: #25262a;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.navBar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navBar-logo {
+    background: #ff8177;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: padding;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 32px;
+    background-image: linear-gradient(to top, #f2aa4cff 0%, #ffb199 100%);
+}
+
+.navBar-menu {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
+}
+
+.navBar-item {
+    height: 80px;
+}
+
+.navBar-links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 16px;
+    height: 100%;
+}
+
+.navBar-links:hover {
+    color: #f2aa4cff;
+    transition: all 0.3s ease;
+}
+
+.navBar {
+
+}
+
+#logo {
+    position: relative;
+    background: url("img/img.png") no-repeat;
+    background-size: 80%;
+    background-position: 30px -19px;
+    border-radius: 200px;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+.mainCointer {
+    display: grid;
+    grid-template-areas: "m m m";
+}
+
+.sBanner {
+    min-height: 80vh;
+    background: url("img/pexels-s-migaj-747964.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    padding-top: 8rem;
+
+    background-attachment: fixed;
+}
+
+.sBanner .content {
+    text-align: center;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 3rem;
+    max-width: 50rem;
+}
+
+.sBanner .content h3 {
+    font-size: 4rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.sBanner .content p {
+    font-size: 1.7rem;
+    color: #777;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+#navBar-logo img {
+    width: 30px;
+    position: relative;
+    right: 240px;
+}
+
+.container {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 1.5rem;
+    background: #eee;
+}
+
+.oneL {
+    margin-left: 10px;
+    height: 515px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    width: 1200px;
+    padding: 2rem;
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.oneR {
+    margin-right: 10px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    padding: 1.5rem;
+    background: black;
+}
+
+.about {
+    text-align: center;
+    padding: 16px 24px;
+}
+
+.about img {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1rem 0px;
+
+}
+
+.about h2 {
+    color: #e67e22;
+    font-size: 20px;
+}
+
+
+.about p {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+.follow {
+    padding: 16px 0px;
+}
+
+.follow a {
+    height: 4rem;
+    line-height: 4rem;
+    width: 4rem;
+    color: rgb(255, 255, 255);
+    font-size: 1.7rem;
+    border-radius: 50%;
+    background: #333;
+    margin: 0px 0.1rem;
+}
+
+#h3Title:hover, #ABT:hover, #INT:hover {
+    color: #f2aa4cff;
+    transition: all 0.3s ease;
+}
+
+#h2 {
+    color: white;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    background: black;
+    border: .1rem solid rgba(0, 0, 0, .2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.subheading {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 1.5rem;
+}
+
+#oneL {
+    height: 255px;
+    width: 1200px;
+}
+
+.contact {
+    background: url("img/pexels-s-migaj-747964.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section {
+    padding: 2rem;
+}
+
+.contact form {
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: 2rem auto;
+    width: 800px;
+    padding: 2rem;
+}
+
+.contact form h3 {
+    color: black;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.contact form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input, .contact form textarea {
+    width: 100%;
+    background: #eee;
+    padding: 1rem;
+    margin: .7rem 0;
+    border-radius: .5rem;
+    color: black;
+    font-size: 16px;
+}
+
+.container form textarea {
+    height: 400px;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    background: black;
+    color: #fff;
+    border-radius: .5rem;
+    padding: .9rem 3rem;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input {
+    width: 49%;
+}
+
+#P1, #P2 {
+
+    display: inline-block;
+}
+
+#oneL-s a {
+    position: relative;
+    left: 420px;
+    color: #f2aa4cff;
+    font-weight: bold;
+}
+
+#oneL-f a {
+    position: relative;
+    left: 870px;
+    color: #f2aa4cff;
+    color: #f2aa4cff;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #343a40;
+}
+
+#oneL-f {
+    padding-top: 20px;
+}
+
+#oneL-line {
+    display: inline-block;
+    height: 3px;
+    width: 200px;
+    margin-left: 1px;
+    background: #777;
+    color: #777;
+}
+
+#oneL h2:hover{
+    color: #f2aa4cff;
+    transition: all 0.3s ease;
+}
+h3:hover{
+    color: #f2aa4cff;
+    transition: all 0.3s ease;
+}
+#oneL-line-f{
+    display: inline-block;
+    height: 3px;
+    width: 200px;
+    margin-left: 1px;
+    background: #777;
+    color: #777;
+    grid-area: line;
+    position: relative;
+    left: 468px ;
+}
+#oneL-c{
+display: grid;
+grid-template-areas: "title title title"
+                        "line line line"
+                        "f s t";
+
+}
+.oneL-type{
+
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    color: #25262a;
+    width: 350px;
+    height: 350px;
+}
+#oneL-title{
+    text-align: center;
+    grid-area: title;
+}
+#oneL-type-f{
+    grid-area: f;
+}
+#oneL-type-s{
+    grid-area: s;
+}
+#oneL-type-t{
+    grid-area: t;
+}
+.oneL-type{
+    font-weight: 400;
+    letter-spacing: 1px;
+
+
+
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.progressBar{
+    background: #959595;
+    width: 250px;
+    height: 10px;
+    border-radius: 10px;
+}
+.progressBar div{
+    height: 10px;
+    border-radius: 5px;
+    width: 50%;
+
+}
+.progressBar div span{
+    font-size: 10px;
+    height: 20px;
+    width: 30px;
+    border-radius: 50%;
+    background: #222;
+    float: right;
+    margin-top: -5px;
+    margin-right: -20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.type-CC{
+background: #e91e63;
+    animation: type-CC 1s linear forwards;
+}
+.type-HC{
+    background: #cddc39;
+    animation: type-HC 1s linear forwards;
+}
+.type-J{
+    background: #00bcd4;
+    animation: type-J 1s linear forwards;
+}
+.type-HC span{
+    border: 1px solid  #cddc39;
+}
+.type-J span{
+    border: 1px solid  #00bcd4;
+}
+.type-CC span{
+    border: 1px solid  #e91e63;
+}
+@keyframes type-HC {
+  100%{
+      width: 49%;
+  }
+}
+@keyframes type-J {
+    100%{
+        width: 8%;
+    }
+}
+@keyframes type-CC {
+    100%{
+        width: 37%;
+    }
+}
+
+
+.cCoures p{
+    top: 5px;
+   position: relative;
+    left: 10px;
+}
+
+
+#footer  ul {
+
+    display: inline-grid;
+    grid-auto-flow: row;
+    grid-gap: 24px;
+    justify-items: center;
+    margin: auto;
+
+
+}
+#footer ul li{
+
+    list-style-type: none;
+}
+
+@media (min-width: 500px) {
+    #footer   ul {
+        grid-auto-flow: column;
+    }
+}
+
+#footer ul  li a {
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+}
+
+#footer ul  li a:hover {
+    color: #f2aa4cff;
+    transition: all 0.3s ease;
+}
+
+#footer ul li:last-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#footer {
+    display: flex;
+    height: 120px;
+    width: 100%;
+    background-color:  #25262a;
+    line-height: 1.3;
+    font-family: Menlo, monospace;
+
+}
+.oneL-type h2{
+    margin-left: 5px;
+}
+.progressBar{
+    margin-left: 5px;
+}
+.cCoures{
+    margin-left: 5px;
+}
+#footer{
+    display: flex;
+    justify-content: center;
+}
+#fDiv{
+
+    height: 60px;
+    padding-top: 20px;
+    width: 300px;
+    padding-left: 50px;
+    border: 1px solid white;
+    border-radius: 40px;
+
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+#contact form h3:hover{
+    color: #f2aa4cff;
+    transition: all 0.3s ease;
+}
+#oneL-title h2:hover{
+    color: #f2aa4cff;
+    transition: all 0.3s ease;
+}
