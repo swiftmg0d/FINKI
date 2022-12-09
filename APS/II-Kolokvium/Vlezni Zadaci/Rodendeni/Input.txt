@@ -1,0 +1,23 @@
+Влез:
+4
+Ivan 20.7.1976
+Ivan 16.7.1988
+Ana  18.7.1966
+Ivan 5.6.1988
+7
+
+Излез:
+Ivan Ana
+
+Влез:
+6
+Ana 19.6.1989
+Ivana 19.6.1977
+Simon 19.6.1994
+Ognen 19.6.1998
+Leona 19.6.1999
+Martin 19.6.1981
+6
+Излез:
+Ana Ivana Simon Ognen Leona Martin
+
