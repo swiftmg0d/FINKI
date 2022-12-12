@@ -1,11 +1,12 @@
-package PrvKolokvium2020PrvTermin;
+package Prv2020Termin1;
 
+import javax.swing.*;
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+        import java.io.IOException;
+        import java.io.InputStreamReader;
+        import java.util.ArrayList;
+        import java.util.Arrays;
+        import java.util.List;
 
 class DLLNode<E> {
     protected E element;
@@ -215,60 +216,46 @@ public class PrvKolokvium2020PrvTermin {
         DLL<Integer> resultList = srediSiGiListite(firstList, secondList);
         System.out.println(resultList);
     }
-
-    public static DLL<Integer> insertA(DLL<Integer> firstList, DLL<Integer> secondList) {
-        DLLNode<Integer> fNode = firstList.getLast();
-        DLLNode<Integer> sNode = secondList.getFirst();
-        DLL<Integer> newList = new DLL<Integer>();
-        DLLNode<Integer> temp = null;
-        while (sNode != null) {
-            firstList.insertLast(sNode.element);
-            sNode = sNode.succ;
-        }
-        return firstList;
+    private static void addTheRest(DLL<Integer>newList,DLLNode<Integer>nodeList,String type){
+     if(type.equals("last")){
+         while (nodeList!=null){
+             newList.insertLast(nodeList.element);
+             nodeList=nodeList.pred;
+         }
+     }else{
+         while (nodeList!=null){
+             newList.insertLast(nodeList.element);
+             nodeList=nodeList.succ;
+         }
+     }
     }
-
-    public static DLL<Integer> newListConvert(DLL<Integer> firstList, DLL<Integer> secondList) {
-        DLL<Integer> newList = new DLL<Integer>();
-        DLLNode<Integer> fNode = firstList.getFirst();
-        DLLNode<Integer> sNode = secondList.getFirst();
-        while (true) {
-            if (firstList.getFirst() == null) break;
-            int max = 0;
-            DLLNode<Integer> temp = null;
-            while (fNode != null) {
-                if (fNode.element > max) {
-                    max = fNode.element;
-                    temp = fNode;
-                }
-                fNode = fNode.succ;
+    private static DLL<Integer>sortDLL(DLL<Integer>firstList, DLL<Integer>secondList){
+        DLLNode<Integer>fNode=firstList.getLast();
+        DLLNode<Integer>lNode=secondList.getFirst();
+        DLL<Integer>newList=new DLL<>();
+        while (fNode!=null && lNode!=null){
+            if(fNode.element>lNode.element){
+                newList.insertLast(fNode.element);
+                fNode=fNode.pred;
+            }else{
+                newList.insertLast(lNode.element);
+                lNode=lNode.succ;
             }
-            newList.insertLast(max);
-            firstList.delete(temp);
-            fNode = firstList.getFirst();
         }
+        addTheRest(newList,fNode,"last");
+        addTheRest(newList,lNode,"first");
         return newList;
-    }
-
-    public static DLL<Integer> insertB(DLL<Integer> firstList, DLL<Integer> secondList) {
-        DLLNode<Integer> fNode = secondList.getLast();
-        while (fNode != null) {
-            firstList.insertLast(fNode.element);
-            fNode = fNode.pred;
-        }
-        return firstList;
     }
 
     private static DLL<Integer> srediSiGiListite(DLL<Integer> firstList, DLL<Integer> secondList) {
         //1-3-4-6-7
         //9-8-5-2-1
-        firstList = insertA(firstList, secondList);
-
-        firstList = newListConvert(firstList, secondList);
-
-
-        DLL<Integer> newList = firstList;
-        return newList = insertB(newList, firstList);
-
+        DLL<Integer>newList=sortDLL(firstList,secondList);
+        DLLNode<Integer>nodeNl=newList.getLast();
+        while (nodeNl!=null){
+            newList.insertLast(nodeNl.element);
+            nodeNl=nodeNl.pred;
+        }
+        return newList;
     }
 }
