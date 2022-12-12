@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class VTOR {
+public class CovidCheck {
     static String split(String line){
         String []spluted=line.split("\\s+");
         return spluted[0];
