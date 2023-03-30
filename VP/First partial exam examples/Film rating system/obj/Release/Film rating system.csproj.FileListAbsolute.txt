@@ -1,0 +1,12 @@
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\bin\Release\Film rating system.exe.config
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\bin\Release\Film rating system.exe
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\bin\Release\Film rating system.pdb
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\obj\Release\Film rating system.csproj.AssemblyReference.cache
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\obj\Release\Film rating system.csproj.SuggestedBindingRedirects.cache
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\obj\Release\Film_rating_system.AddFilm.resources
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\obj\Release\Film_rating_system.FilmRatingSystem.resources
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\obj\Release\Film_rating_system.Properties.Resources.resources
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\obj\Release\Film rating system.csproj.GenerateResource.cache
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\obj\Release\Film rating system.csproj.CoreCompileInputs.cache
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\obj\Release\Film rating system.exe
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Film rating system\obj\Release\Film rating system.pdb
