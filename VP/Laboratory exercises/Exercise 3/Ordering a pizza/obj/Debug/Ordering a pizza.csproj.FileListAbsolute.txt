@@ -1,0 +1,11 @@
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\bin\Debug\Ordering a pizza.exe.config
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\bin\Debug\Ordering a pizza.exe
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\bin\Debug\Ordering a pizza.pdb
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\obj\Debug\Ordering a pizza.csproj.AssemblyReference.cache
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\obj\Debug\Ordering a pizza.csproj.SuggestedBindingRedirects.cache
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\obj\Debug\Ordering_a_pizza.Form1.resources
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\obj\Debug\Ordering_a_pizza.Properties.Resources.resources
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\obj\Debug\Ordering a pizza.csproj.GenerateResource.cache
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\obj\Debug\Ordering a pizza.csproj.CoreCompileInputs.cache
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\obj\Debug\Ordering a pizza.exe
+C:\Users\ZIVE\FINKI\VP\Laboratory exercises\Exercise 3\Ordering a pizza\obj\Debug\Ordering a pizza.pdb
