@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ordering_a_pizza
 {
-    public partial class Form1 : Form
+    public partial class OrderingPizza : Form
     {
         public ErrorProvider errorProvider { get; set; }
         public int TotalPrice { get; set; }
@@ -22,7 +22,7 @@ namespace Ordering_a_pizza
         public Drinks Drinks { get; set; }
         public List<Dessert> List0fDesserts { get; set; }
         public List<Dessert> List0fOrderDesserts { get; set; }
-        public Form1()
+        public OrderingPizza()
         {
             InitializeComponent();
         }
@@ -142,14 +142,16 @@ namespace Ordering_a_pizza
 
         private void txt_SodaQuantity_TextChanged(object sender, EventArgs e)
         {
-            if (txt_SodaQuantity.Text.Length > 0)
+            
+            if (string.IsNullOrWhiteSpace(txt_SodaQuantity.Text))
             {
 
-                txt_TotalSodaPrice.Text = (int.Parse(txt_SodaQuantity.Text) * Drinks.SodaPrice).ToString();
+                txt_TotalSodaPrice.Text = "0";
             }
             else
             {
-                txt_TotalSodaPrice.Text = "0";
+                txt_TotalSodaPrice.Text = (int.Parse(txt_SodaQuantity.Text) * Drinks.SodaPrice).ToString();
+                
 
             }
             
@@ -157,28 +159,32 @@ namespace Ordering_a_pizza
 
         private void txt_JuiceQuantity_TextChanged(object sender, EventArgs e)
         {
-            if (txt_JuiceQuantity.Text.Length>0)
+            
+            if (string.IsNullOrWhiteSpace(txt_JuiceQuantity.Text))
             {
-                txt_TotalJuicePrice.Text = (int.Parse(txt_JuiceQuantity.Text) * Drinks.JuicePrice).ToString();
-                
+                txt_TotalJuicePrice.Text = "0";
+
             }
             else
             {
-                txt_TotalJuicePrice.Text = "0";
+                txt_TotalJuicePrice.Text = (int.Parse(txt_JuiceQuantity.Text) * Drinks.JuicePrice).ToString();
+                
             }
             
         }
 
         private void txt_BeerQuantity_TextChanged(object sender, EventArgs e)
         {
-            if (txt_BeerQuantity.Text.Length>0)
+           
+            if (string.IsNullOrWhiteSpace(txt_BeerQuantity.Text))
             {
-                txt_TotalBeerPrice.Text = (int.Parse(txt_BeerQuantity.Text) * Drinks.BeerPrice).ToString();
-                
+                txt_TotalBeerPrice.Text = "0";
+
             }
             else
             {
-                txt_TotalBeerPrice.Text = "0";
+                txt_TotalBeerPrice.Text = (int.Parse(txt_BeerQuantity.Text) * Drinks.BeerPrice).ToString();
+                
             }
           
             
