@@ -10,3 +10,4 @@ C:\Users\ZIVE\FINKI\VP\First partial exam examples\Airports\obj\Debug\Airports.c
 C:\Users\ZIVE\FINKI\VP\First partial exam examples\Airports\obj\Debug\Airports.csproj.CoreCompileInputs.cache
 C:\Users\ZIVE\FINKI\VP\First partial exam examples\Airports\obj\Debug\Airports.exe
 C:\Users\ZIVE\FINKI\VP\First partial exam examples\Airports\obj\Debug\Airports.pdb
+C:\Users\ZIVE\FINKI\VP\First partial exam examples\Airports\obj\Debug\Airports.AddDestination.resources

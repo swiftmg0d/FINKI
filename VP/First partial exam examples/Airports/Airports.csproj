@@ -52,7 +52,14 @@
     <Compile Include="AddAirport.Designer.cs">
       <DependentUpon>AddAirport.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDestination.Designer.cs">
+      <DependentUpon>AddDestination.cs</DependentUpon>
+    </Compile>
     <Compile Include="Airport.cs" />
+    <Compile Include="Destination.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +70,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddAirport.resx">
       <DependentUpon>AddAirport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDestination.resx">
+      <DependentUpon>AddDestination.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
