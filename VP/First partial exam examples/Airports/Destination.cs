@@ -6,25 +6,26 @@ using System.Threading.Tasks;
 
 namespace Airports
 {
-    public class Airport
+    public class Destination
     {
-        public string City { get; set; }
         public string Name { get; set; }
-        public string Code { get; set; }
-        public List<Destination> Destinations { get; set; }
-       
+        public int Length { get; set; }
+        public int Price { get; set; }
 
-        public Airport(string city, string name, string code)
+        public Destination(string name, int length, int price)
         {
-            City = city;
             Name = name;
-            Code = code;
-            Destinations=new List<Destination>();
+            Length = length;
+            Price = price;
+        }
+
+        public Destination()
+        {
         }
 
         public override string ToString()
         {
-            return $"{Code} - {Name} - {City}";
+            return $"{Name}  {Length}km - {Price} EUR";
         }
 
         public override bool Equals(object obj)

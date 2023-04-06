@@ -114,5 +114,21 @@ namespace Airports
             ValidateCodeLength();
             
         }
+
+        private void btn_SaveAirpot_Click(object sender, EventArgs e)
+        {
+            if(ValidateName() && ValidateCity() && ValidateCodeLength())
+            {
+                this.DialogResult= DialogResult.OK;
+                CreatedAirport = new Airport(txt_City.Text, txt_Name.Text, txt_Code.Text);
+                this.Close();
+            }
+        }
+
+        private void btn_CancelAirport_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
     }
 }

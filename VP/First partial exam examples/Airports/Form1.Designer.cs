@@ -32,8 +32,8 @@
             this.listBox_Airports = new System.Windows.Forms.ListBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Avg = new System.Windows.Forms.TextBox();
+            this.txt_Max = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -63,11 +63,12 @@
             this.listBox_Airports.Name = "listBox_Airports";
             this.listBox_Airports.Size = new System.Drawing.Size(227, 329);
             this.listBox_Airports.TabIndex = 0;
+            this.listBox_Airports.SelectedIndexChanged += new System.EventHandler(this.listBox_Airports_SelectedIndexChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_Avg);
+            this.groupBox2.Controls.Add(this.txt_Max);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(305, 398);
@@ -77,22 +78,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Дестинации";
             // 
-            // textBox2
+            // txt_Avg
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(208, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_Avg.Location = new System.Drawing.Point(16, 90);
+            this.txt_Avg.Name = "txt_Avg";
+            this.txt_Avg.ReadOnly = true;
+            this.txt_Avg.Size = new System.Drawing.Size(208, 20);
+            this.txt_Avg.TabIndex = 3;
+            this.txt_Avg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox1
+            // txt_Max
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(208, 20);
-            this.textBox1.TabIndex = 2;
+            this.txt_Max.Location = new System.Drawing.Point(16, 46);
+            this.txt_Max.Name = "txt_Max";
+            this.txt_Max.ReadOnly = true;
+            this.txt_Max.Size = new System.Drawing.Size(208, 20);
+            this.txt_Max.TabIndex = 2;
             // 
             // label2
             // 
@@ -148,6 +149,7 @@
             this.btn_AddDestination.TabIndex = 4;
             this.btn_AddDestination.Text = "Додади дестинација";
             this.btn_AddDestination.UseVisualStyleBackColor = true;
+            this.btn_AddDestination.Click += new System.EventHandler(this.btn_AddDestination_Click);
             // 
             // btn_DeleteAirport
             // 
@@ -157,6 +159,7 @@
             this.btn_DeleteAirport.TabIndex = 5;
             this.btn_DeleteAirport.Text = "Избриши аердром";
             this.btn_DeleteAirport.UseVisualStyleBackColor = true;
+            this.btn_DeleteAirport.Click += new System.EventHandler(this.btn_DeleteAirport_Click);
             // 
             // Form1
             // 
@@ -185,8 +188,8 @@
         private System.Windows.Forms.ListBox listBox_Airports;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Avg;
+        private System.Windows.Forms.TextBox txt_Max;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;

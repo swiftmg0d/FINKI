@@ -65,6 +65,7 @@
             this.btn_CancelAirport.TabIndex = 9;
             this.btn_CancelAirport.Text = "Откажи";
             this.btn_CancelAirport.UseVisualStyleBackColor = true;
+            this.btn_CancelAirport.Click += new System.EventHandler(this.btn_CancelAirport_Click);
             // 
             // btn_SaveAirpot
             // 
@@ -74,6 +75,7 @@
             this.btn_SaveAirpot.TabIndex = 8;
             this.btn_SaveAirpot.Text = "Зачувај";
             this.btn_SaveAirpot.UseVisualStyleBackColor = true;
+            this.btn_SaveAirpot.Click += new System.EventHandler(this.btn_SaveAirpot_Click);
             // 
             // txt_Code
             // 
