@@ -55,9 +55,6 @@ if __name__ == '__main__':
 
     dt_features, dt_classes = divide_dataset(dataset)
 
-    encoder=OrdinalEncoder();
-    encoder.fit(dt_features)
-
     trainX, trainY = dt_features[:int(len(dt_features) * 0.85)], dt_classes[:int(len(dt_classes) * 0.85)]
     testX, testY = dt_features[int(len(dt_features) * 0.85):], dt_classes[int(len(dt_classes) * 0.85):]
 
@@ -68,7 +65,6 @@ if __name__ == '__main__':
     accurracy=sum(x==y for x,y in zip(testY,clf.predict(testX)))
 
     entry=[float(entry) for entry in input().split(" ")]
-    encoder.fit([entry])
 
     print(accurracy/len(testY))
     print(clf.predict([entry])[0])
