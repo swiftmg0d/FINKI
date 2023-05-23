@@ -1,0 +1,11 @@
+C:\Users\ZIVE\VS-projtects\CirlcesEater\bin\Debug\CirlcesEater.exe.config
+C:\Users\ZIVE\VS-projtects\CirlcesEater\bin\Debug\CirlcesEater.exe
+C:\Users\ZIVE\VS-projtects\CirlcesEater\bin\Debug\CirlcesEater.pdb
+C:\Users\ZIVE\VS-projtects\CirlcesEater\obj\Debug\CirlcesEater.csproj.AssemblyReference.cache
+C:\Users\ZIVE\VS-projtects\CirlcesEater\obj\Debug\CirlcesEater.csproj.SuggestedBindingRedirects.cache
+C:\Users\ZIVE\VS-projtects\CirlcesEater\obj\Debug\CirlcesEater.Form1.resources
+C:\Users\ZIVE\VS-projtects\CirlcesEater\obj\Debug\CirlcesEater.Properties.Resources.resources
+C:\Users\ZIVE\VS-projtects\CirlcesEater\obj\Debug\CirlcesEater.csproj.GenerateResource.cache
+C:\Users\ZIVE\VS-projtects\CirlcesEater\obj\Debug\CirlcesEater.csproj.CoreCompileInputs.cache
+C:\Users\ZIVE\VS-projtects\CirlcesEater\obj\Debug\CirlcesEater.exe
+C:\Users\ZIVE\VS-projtects\CirlcesEater\obj\Debug\CirlcesEater.pdb
