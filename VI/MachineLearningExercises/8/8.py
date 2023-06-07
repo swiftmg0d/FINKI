@@ -413,7 +413,7 @@ def Calculate(x_1):
     testX, testY = [t_x[:-1] for t_x in test_set], [t_y[-1] for t_y in test_set]
 
     classifier.fit(trainX, trainY)
-    return accuracy_score(testY,classifier.predict(testX))
+    return classifier.score(testX,testY)
 
 
 warnings.filterwarnings('ignore', category=ConvergenceWarning)
