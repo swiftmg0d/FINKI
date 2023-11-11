@@ -1,14 +1,17 @@
 Спецификација за лабораториската вежба
 Креирајте нов Spring Boot проект со група mk.finki.ukim.mk и artefactId=lab кој ги има истите зависности како проектот од аудиториските вежби (зависностите може да ги видите во <dependency> тагoвите во pom.xml.
-Дефинирајте пакет mk.ukim.finki.wp.lab.model и во него креирајте ја TicketOrder класата. Таа треба да содржи:
+Дефинирајте пакет mk.ukim.finki.wp.lab.model и во него креирајте ја TicketOrder класата. Таа треба да содржи: 
+
 String movieTitle,
 String clientName,
 String clientAddress и
 Long numberOfTickets.
+
 Во mk.ukim.finki.wp.lab.model креирајте Movie класа која ќе содржи:
 String title,
 String summary,
 double rating,
+
 Креирајте класа MovieRepository во пакетот mk.ukim.finki.wp.lab.repository, во која ќе чувате List<Movie> иницијализирана со 10 вредности.
 Имплементирајте метод public List<Movie> findAll(); кој само ќе ја врати листата.
 Имплементирајте метод public List<Movie> searchMovies(String text); кој ќе направи пребарување низ листата на филмови и ќе ги врати оние во чиј наслов или кратка содржина се содржи текстот text кој се праќа како аргумент на методот.
@@ -21,22 +24,24 @@ public interface MovieService {
 public interface TicketOrderService{
     TicketOrder placeOrder(String movieTitle, String clientName, String address, int numberOfTickets);
 }
+
 Имплементирајте ги сервисите (MovieService треба да зависи од MovieRepository).
-Креирајте сервлет MovieListSevlet во пакетот mk.ukim.finki.lab.web и мапирајте го на патеката /. Овој сервлет треба да зависи од MovieService и да ги прикаже сите добиени филмови од методот listAll(). Овозможете корисникот да избере еден од филмовите и за истиот да наведе број на карти што сака да ги нарача. Креирајте по едно радио копче за секој филм каде што вредноста на копчето ќе биде насловот на филмот, а текстот кој ќе се прикаже ќе биде во форматот: Title: <movie_title>, Summary:<movie_summary>, Rating: <movie_rating>
+Креирајте сервлет MovieListSevlet во пакетот mk.ukim.finki.lab.web и мапирајте го на патеката /. Овој сервлет треба да зависи од MovieService и да ги прикаже сите добиени филмови од методот listAll(). Овозможете корисникот да избере еден од филмовите и за истиот да наведе број на карти што сака да ги нарача. Креирајте по едно радио копче за секој филм каде што вредноста на копчето ќе биде насловот на филмот, а текстот кој ќе се прикаже ќе биде во форматот: 
+Title: <movie_title>, Summary:<movie_summary>, Rating: <movie_rating>
 
 Прилагодете го фајлот listMovies.html за изгледот на оваа страница.
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Movie Ticket Order page - Welcome and choose a Movie</title>
-        <style type="text/css">
-            body {
-                width: 800px;
-                margin: auto;
-            }
-        </style>
-    </head>
-    <body>
+" <html>
+"     <head>
+"         <meta charset="utf-8">
+"         <title>Movie Ticket Order page - Welcome and choose a Movie</title>
+"         <style type="text/css">
+"             body {
+"                 width: 800px;
+"                 margin: auto;
+"             }
+"         </style>
+"     </head>
+"     <body>
         <header>
              <h1>Welcome to our Movie Ticket Shop App</h1>
         </header>
