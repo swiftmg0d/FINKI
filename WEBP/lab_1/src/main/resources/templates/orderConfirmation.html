@@ -1,0 +1,50 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Ordered Ticket - Confirmation</title>
+    <style type="text/css">
+        body {
+            width: 800px;
+            margin: auto;
+        }
+        table {
+            width:100%;
+        }
+        table, td, th {
+            border: 1px solid black;
+            padding: 3px 2px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <header>
+        <h1>Movie Order page - Order confirmation </h1>
+    </header>
+    <table>
+        <tr>
+            <th colspan="2">
+                Your Order Status
+            </th>
+        </tr>
+        <tr>
+            <td><b>Client Name </b></td>
+            <td th:text="${TicketOrder.getClientName()}"></td>
+        </tr>
+        <tr>
+            <td><b>Client IP Address</b></td>
+            <td th:text="${TicketOrder.getClientAddress()}"></td>
+        </tr>
+        <tr>
+            <td><b>Ticket for Movie</b></td>
+            <td th:text="${TicketOrder.getMovieTitle()}"></td>
+        </tr>
+        <tr>
+            <td ><b>Number of tickets</b></td>
+            <td th:text="${TicketOrder.getNumber0fTickets()}"></td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>
