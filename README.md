@@ -1,7 +1,7 @@
 
  <kbd> 
  <br> 
-<h2 align="center">Tá tú Éireannach nach bhfuil tú?</h2>
+<h2 align="center">Is Éireannach thú nach tusa?</h2>
 
 
 
