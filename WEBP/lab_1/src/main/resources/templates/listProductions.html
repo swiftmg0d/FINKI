@@ -1,0 +1,50 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Movie Ticket Order page - Welcome and choose a Movie</title>
+    <style type="text/css">
+        body {
+            width: 800px;
+            margin: auto;
+        }
+        table {
+            width:100%;
+        }
+        table, td, th {
+            border: 1px solid black;
+            padding: 3px 2px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Production name</td>
+        <td>Production ID</td>
+        <td>Production Adress</td>
+        <td>Productio  Country</td>
+        <td>Delete / Edit</td>
+
+
+    </tr>
+    <tr th:each="production : ${listProductions}">
+       <td th:text="${production.getName()}"></td>
+        <td th:text="${production.getId()}"></td>
+        <td th:text="${production.getAddress()}"></td>
+        <td th:text="${production.getCountry()}"></td>
+        <td>
+            <form style="display: inline" th:method="post" th:action="@{'/productions/delete/{id}' (id=${production.getId()})}">
+                <input  style="display: inline" type="submit" value="Delete">
+            </form>
+            <form style="display: inline" th:method="get" th:action="@{'/productions/edit/{id}' (id=${production.getId()})}">
+            <input type="submit" value="Edit">
+            </form>
+        <td>
+    </tr>
+
+</table>
+</body>
+</html>

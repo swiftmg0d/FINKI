@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    body {
+        width: 800px;
+        margin: auto;
+    }
+
+    input, select {
+        width: 500px;
+        height: 50px;
+        font-size: 25px;
+    }
+</style>
+<body style="margin: auto;">
+<div style="margin: auto">
+
+    <form th:action="@{'/productions/edited'}" method="post">
+        <h1>Edit Production!</h1>
+        <div>
+            <h3>Name</h3>
+            <input type="text" th:value="${editProduction.getName()}" th:name="name">
+
+            <input type="hidden" th:value="${editProduction.getId()}" th:name="id">
+            <h3>Country</h3>
+
+            <input type="text" th:value="${editProduction.getCountry()}" th:name="country">
+            <h3>Address</h3>
+
+            <input type="text" th:value="${editProduction.getAddress()}" th:name="address">
+
+        </div>
+        <input type="submit" name="saveProduction" value="Save production">
+    </form>
+
+
+
+</div>
+</body>
+</html>

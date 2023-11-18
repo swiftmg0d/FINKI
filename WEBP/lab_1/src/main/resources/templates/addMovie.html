@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    body {
+        width: 800px;
+        margin: auto;
+    }
+
+    input, select {
+        width: 500px;
+        height: 50px;
+        font-size: 25px;
+    }
+</style>
+<body style="margin: auto;">
+<div style="margin: auto">
+
+
+    <form th:method="post" th:action="@{'/movies/add'}">
+        <h1>Save new Movie!</h1>
+
+        <input type="hidden" name="id" th:value="(${movieEdit} != null ? ${movieEdit.getId()} : '')"></input>
+
+        <div style="margin: auto">
+            <input th:value="(${movieEdit} != null ? ${movieEdit.getTitle()} : '')" name="title"
+                   placeholder="Enter movie name!">
+        </div>
+        <div>
+            <input th:value="(${movieEdit} != null ? ${movieEdit.getSummary()} : '')" name="summary"
+                   placeholder="Enter movie summary!">
+        </div>
+        <div>
+            <input th:value="(${movieEdit} != null ? ${movieEdit.getRating()} : '')" name="rating"
+                   placeholder="Enter movie rating!">
+        </div>
+        <div>
+            <input type="hidden" th:value="(${movieEdit} != null ? 'edit' : 'add')" name="edit"
+                   placeholder="Enter movie rating!">
+        </div>
+        <div>
+            <select name="production" th:value="(${movieEdit} != null ? ${movieEdit.production.getName()} : '')">
+                <option th:each="production : ${productionList}" th:text="${production.getName()}"
+                           th:value="|${production.getId()} ${production.getName()} ${production.getAddress()} ${production.getCountry()}|"></option>
+            </select>
+        </div>
+        <input type="submit" name="addfilm">
+    </form>
+
+
+</div>
+</body>
+</html>
