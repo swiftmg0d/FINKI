@@ -1,0 +1,145 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Movie Ticket Order page - Welcome and choose a Movie</title>
+    <style type="text/css">
+        body {
+            width: 800px;
+            margin: auto;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 70px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td, th, input {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 3px 2px;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header style="margin: auto">
+    <h1 style="text-align: center">Welcome to our Movie Ticket Shop App</h1>
+    <h4 style="text-align: center">Welcome dear
+        <th:block th:text="(${user}!=null ? ${user.getName()}: '')"></th:block>
+        ,hope you enjoy shopping with us!
+    </h4>
+    <a  style="text-decoration: none; color: black; background-color: ghostwhite; font-weight: bold; border-radius: 5px; border: 1px solid black" href="/movies/shopping-cart">My shopping cart</a>
+</header>
+<main>
+    <h3>Search movies</h3>
+    <form th:method="post" th:action="@{'/movies/result'}">
+        <div>
+            <span>Movie:<input style="margin-left: 10px" type="text" name="SearchedMovie"></span><span style="margin-left: 20px">Rating:
+            <input style="margin-right: 10px" type="text" name="SearchedRating"></span><input
+                type="submit" value="Search">
+        </div>
+        <div>
+            <p style="color: red;font-weight: bold;text-align: center" th:text="(${error}!=null ?  ${error} : '')"></p>
+        </div>
+
+        <div>
+        </div>
+    </form>
+
+    <h2>Choose movie:</h2>
+    <!-- Display radio buttons for each movie,
+            the value should be the movie title
+            and the displayed text should be Title: <movie_title>, Summary:<movie_summary>, Rating: <movie_rating> -->
+
+
+    <form th:method="post" th:action="@{'/ticketConfirmation/ticketCreated'}">
+        <table style="margin-top: 40px">
+            <tr>
+                <td>Select</td>
+                <td>Film Title</td>
+                <td>Film Summary</td>
+                <td>Film Rating</td>
+                <td>Film /ID</td>
+                <td>Production name</td>
+                <td>Add to shopping cart</td>
+                <td>Delete / Edit</td>
+
+            </tr>
+
+            <tr th:each="movie : ${movieList}">
+                <td><input type="radio" th:value="${movie.getId() }" th:id="${movie.getTitle()}"
+                           name="selectedMovie"></td>
+                <td th:text="${movie.getTitle()}" th:name="movieTitle"></td>
+                <td th:text="${movie.getSummary()}"></td>
+                <td th:text="${movie.getRating()}"></td>
+                <td th:text="${movie.getId()}"></td>
+                <td th:text="${movie.production.getName()}"></td>
+                <td>
+                    <form style="display: inline" method="post"
+                          th:action="@{'/movies/shopping-cart/add'}">
+                        <input type="submit" value="Add to shopping card" name="btn">
+                        <input type="hidden" th:value="${movie.getId()}" name="movieID">
+                        <span style="display: block">Number of tickets</span>
+                        <input type="text" th:name="tickets">
+                    </form>
+                </td>
+
+                <td>
+                    <form style="display: inline" th:method="post"
+                          th:action="@{'/movies/delete/{id}' (id=${movie.getId()})}">
+                        <input type="submit" name="delete" value="Delete">
+                        <input type="hidden" name="deletedMovie" value="Delete" th:value="${movie.getTitle()}">
+                        <input type="hidden" th:value="${movie.getId()}" th:name="movieID">
+                    </form>
+                    <form style="display: inline" th:method="get"
+                          th:action="@{'/movies/edit/{id}' (id=${movie.getId()})}">
+                        <input type="submit" value="Edit" name="edit">
+                    </form>
+                </td>
+                <td>
+
+
+
+                </td>
+            </tr>
+
+        </table>
+
+
+        <h2>Choose number of tickets:</h2>
+        <input type="number" name="numTickets" min="1" max="10"><br/>
+        <br/>
+
+        <input type="submit" value="Submit">
+        </form>
+
+
+    <h2>Most popular movie:</h2>
+    <div>Film name:
+        <th:block th:text="(${popularMovie}!=null ? ${popularMovie.getTitle()} : '')"></th:block>
+        , Number of tickets:
+        <th:block th:text="(${popularMovie}!=null ? ${popularMovie.getNumTickets()} : '')"></th:block>
+    </div>
+    <br>
+    <br>
+
+    <div style="margin: auto">
+        <form th:method="get" th:action="@{'/movies/add-form'}">
+            <input type="submit" style="width: 150px; height: 25px; font-size: 15px;" value="Add a film!">
+        </form>
+    </div>
+
+    <div style="margin-top: 120px">
+        <form th:method="post" th:action="@{'/logout'}">
+            <input type="submit" value="Logout">
+        </form>
+    </div>
+</main>
+</body>
+</html>

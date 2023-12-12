@@ -1,0 +1,85 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Ordered Ticket - Confirmation</title>
+    <style type="text/css">
+        body {
+            width: 800px;
+            margin: auto;
+        }
+        table {
+            width:100%;
+            padding: 30px;
+        }
+        table, td, th {
+            border: 1px solid black;
+            padding: 3px 2px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <header>
+        <h1>Movie Order page - Order confirmation </h1>
+    </header>
+    <table>
+        <tr>
+            <th colspan="2">
+                Your Order Status
+            </th>
+        </tr>
+        <tr>
+            <td><b>Client Name </b></td>
+            <td th:text="${ticketOrder.user.getName()}"></td>
+        </tr>
+        <tr>
+            <td><b>Ticket for Movie</b></td>
+            <td th:text="${ticketOrder.movie.getTitle()}"></td>
+        </tr>
+        <tr>
+            <td ><b>Number of tickets</b></td>
+            <td th:text="${ticketOrder.getNumber0fTickets()}"></td>
+        </tr>
+        <tr>
+            <td ><b>N</b></td>
+            <td th:text="${ticketOrder.getNumber0fTickets()}"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <h1>List of bought films and tickets</h1>
+        <p style="color: red;font-weight: bold" th:text="(${error}!=null ? ${error} : '')"></p>
+        <table>
+        <tr>
+            <td>Title</td>
+            <td>ID</td>
+            <td>Rating</td>
+            <td>Summary</td>
+            <td>Production</td>
+            <td>Number of Tickets</td>
+            <td>Update Rating</td>
+        </tr>
+        <tr th:each="boughtMovie : ${list0fBoughtMovies}">
+
+            <td th:text="${boughtMovie.getTitle()}"></td>
+
+            <td th:text="${boughtMovie.getId()}"></td>
+            <td th:text="${boughtMovie.getRating()}"></td>
+            <td th:text="${boughtMovie.getSummary()}"></td>
+            <td th:text="${boughtMovie.getProduction().getName()}"></td>
+            <td style="text-align: center" th:text="${boughtMovie.numTickets}"></td>
+            <td>
+                <form th:action="@{'/ticketConfirmation/updateRating'}" method="post">
+
+                    <input type="text" name="rating">
+                    <input type="submit"  value="Update Rating">
+                    <input type="hidden" name="movieID" th:value="${boughtMovie.getId()}">
+                </form>
+            </td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>

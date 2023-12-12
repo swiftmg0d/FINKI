@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"><head>
+    <meta charset="UTF-8">
+    <title>Shopping cart</title>
+    <style>
+        body {
+            width: 800px;
+            margin: auto;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 70px;
+            height: 1200px;
+        }
+        table {
+            width: 100%;
+        }
+
+        td, th, input {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 3px 2px;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body >
+    <h3 style="text-align: center"><th:block th:text="${user.getName()}"></th:block>'s shopping cart</h3>
+    <div th:if="(${error}==null)">
+        <form method="post" th:action="@{'/movies/shopping-cart/filter'}">
+            <div>Filter data from <input type="datetime-local" th:name="from"> </div>
+            <div>Filter data to  <input style="margin-left: 4px" type="datetime-local" th:name="to"> </div>
+            <div><input type="submit" value="Filter"></div>
+        </form>
+
+
+        <table style="margin-top: 40px">
+            <tr>
+                <td>Title</td>
+                <td>Number of tickets</td>
+                <td>Date</td>
+                <td>Price</td>
+            </tr>
+            <tr th:each="ticket : ${tickets}">
+                <td th:text="${ticket.getMovie().getTitle()}"></td>
+                <td th:text="${ticket.getNumber0fTickets()}"></td>
+                <td th:text="${#temporals.format(ticket.getLocalDateTime(), 'dd-MM-yyyy  HH:mm:ss')}"></td>
+                <td>
+                    <form method="post" th:action="@{'/movies/shopping-cart/updateprice'}">
+                        <input type="text" name="price">
+                        <input type="submit">
+                        <input type="datetime-local"><input type="datetime-local">
+                        <input type="hidden" name="movie" th:value="${ticket.getId()}">
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <div style="margin-top: 100px">
+            <form method="post" th:action="@{'/movies/shopping-cart/confirm'}">
+                <input style="padding: 10px; margin: 20px; display: inline-flex" type="submit" value="Confirm">
+            </form>
+            <form method="post" th:action="@{'/movies/shopping-cart/cancel'}">
+                <input style="padding: 10px;margin: 20px; display: inline-flex" type="submit" value="Cancel">
+            </form>
+        </div>
+
+    </div>
+    <div th:if="(${error}!=null)">
+        <p style="text-align: center;font-weight: bold;color: red"; th:text="${error}"></p>
+    </div>
+
+
+</body>
+</html>
