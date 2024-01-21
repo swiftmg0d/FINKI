@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WP Exam</title>
+</head>
+<body>
+<!-- The form should submit to MoviesController.create or MoviesController.update,
+     depending on whether we are creating or editing a movie -->
+<form method="post" th:action="${movie}!=null ? '/movies/'+${movie.id} : '/movies'">
+    <div>
+        <label for="name">Name</label>
+        <input type="text"
+               id="name"
+               name="name"
+               th:value="${movie?.name}"
+               required>
+    </div>
+    <div>
+        <label for="description">Description</label>
+        <input type="text"
+               id="description"
+               name="description"
+               th:value="${movie?.description}"
+               required>
+    </div>
+    <div>
+        <label for="rating">Rating</label>
+        <input type="text"
+               id="rating"
+               name="rating"
+               th:value="${movie?.rating}"
+               required>
+    </div>
+    <div>
+        <label>Genre</label><br/>
+        <select id="genre" name="genre" multiple="multiple" size="5">
+            <!-- For each genre you should have one <option> like below  -->
+            <option th:each="genre : ${genres}"
+                    th:text="${genre.name()}"
+                    th:value="${genre}"
+                    th:selected="${movie?.genre==genre}"
+                    value="[genre]"> [genre.name]</option>
+        </select>
+    </div>
+    <div>
+        <label>Director</label><br/>
+        <select id="director" name="director" multiple="multiple" size="5">
+            <!-- For each director you should have one <option> like below  -->
+            <option th:each="director : ${directors}"
+                    th:text="${director.name}"
+                    th:value="${director.id}"
+                    th:selected="${movie?.director==director}"
+                    value="[director.id]"> [director.name]</option>
+        </select>
+    </div>
+
+    <button id="submit" type="submit">Submit</button>
+    <a id="back" href="/movies" type="button" class="btn btn-primary">Back to movies</a>
+</form>
+
+<div>
+    <ul id="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
