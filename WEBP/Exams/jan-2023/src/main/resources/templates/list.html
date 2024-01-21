@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WP Exam</title>
+</head>
+<body>
+
+<div>
+    <!-- The form below should invoke the method CandidatesController.showCandidates -->
+    <form id="filter-form">
+        <label for="years">Years</label>
+        <input id="years" type="text" name="years"/>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+            <option value="">All</option>
+            <!-- For each gender you should have one <option> like below  -->
+            <option th:each="gender : ${genders}" th:text="${gender.name()}"
+                    th:value="${gender}"
+                    value="[gender]"> [gender.name]</option>
+        </select>
+        <button id="filter" type="submit">Filter</button>
+    </form>
+    <div>
+        <!-- CandidatesController.showAdd -->
+        <a  sec:authorize="hasRole('ROLE_ADMIN')" href="/candidates/add" class="add-item">
+            Add new candidate
+        </a>
+    </div>
+    <table>
+        <tr>
+            <th>Candidate name</th>
+            <th>Biography</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Party</th>
+            <th>Votes</th>
+            <th>Actions</th>
+        </tr>
+        <!-- For each candidate you should have one <tr> like below -->
+        <tr th:each="candidate : ${candidates}" class="item">
+            <td th:text="${candidate.name}">[candidate.name]</td>
+            <td th:text="${candidate.bio}">[candidate.bio]</td>
+            <td th:text="${candidate.dateOfBirth}">[candidate.dateOfBirth]</td>
+            <td th:text="${candidate.gender}">[candidate.gender]</td>
+            <td th:text="${candidate.party}">[candidate.party]</td>
+            <td th:text="${candidate.votes}">[candidate.votes]</td>
+            <td>
+                <!-- CandidatesController.delete -->
+                <form method="post" th:action="@{'/candidates/{id}/delete'(id=${candidate.id})}" >
+                    <button sec:authorize="hasRole('ROLE_ADMIN')" type="submit" class="delete-item">Delete</button>
+                </form>
+                <!-- CandidatesController.showEdit -->
+                <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{'/candidates/{id}/edit'(id=${candidate.id})}" class="edit-item">Edit</a>
+                <!-- CandidatesController.vote -->
+                <form method="post" th:action="@{'/candidates/{id}/vote'(id=${candidate.id})}" >
+                    <button sec:authorize="hasRole('ROLE_USER')" type="submit" class="like-item">Vote</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</div>
+<div>
+    <ul id="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+</div>
+</body>
+</html>
