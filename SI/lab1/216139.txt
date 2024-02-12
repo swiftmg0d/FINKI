@@ -1,0 +1,83 @@
+4.  mkdir SI_2023_lab1_216139    
+    # - ( Креираме нов фајл )
+    git init                     
+    # - ( Иницијализираме git во самиот фајл )
+
+5.  git remote add origin https://github.com/swiftmg0d/SI_2023_lab1_216139.git  
+    # - ( Го поврзуваме локалниот репозиториум со репозиториум кој се наоѓа на github )
+    # - ( За да видеме дали успешно сме се поврзале, може да ја искористиме командата git remote -v ) 
+    # - ( Оваа исто така може да се постигне и со git clone https://github.com/swiftmg0d/SI_2023_lab1_216139.git )
+		
+6.  nano README.md 
+    # - ( Крерираме текстуален фајл и го отвараме преку nano )	
+    git add README.md
+    # - ( Со командата git add дадениот фајл преминува од untracked -> staged )	
+    git commit -m "Initial commit"
+    # - ( Со командата git commit дадениот фајл преминува од staged -> commited
+	
+7.  nano SILab1.java
+    git add SIlab1.java
+    git commit -m "Add java class"
+
+8.  git push -u origin master
+    # - ( Го синхронизираме далечниот репозиториум со локалниот ) 
+
+9.  git branch bug1
+    git branch bug2
+    git branch bug3
+    # - ( Крерираме три нови гранки )
+
+10. git checkout bug1
+    # - ( Се префламе на bug1-гранката )
+
+11. nano SILab1.java  		
+    git commit -a -m "Fix wrong loop for reading"
+    # - ( Дадениот фајл ни е во состојба modified затоа можеме да ја искористеме командата git commit -a -m " " )
+
+12. git checkout bug2
+
+13. nano SIlab1.java
+    git commit -a -m "Fix wrong condition in filterOddNumbers"
+
+14. git checkout bug3
+
+15. nano SILab1.java
+    git commit -a -m "Fix method sumEvenNumbers"
+
+16. git push -all origin
+
+17. git checkout master
+
+18. git merge bug1
+    # - ( Нема никакви конфликти, гранката ја споивме преку Fast-forward методата )
+
+19. git push --all origin
+    # - ( Ги синхронизираме сите гранки кон одалечениот репозиториум )
+
+20. git merge bug2
+    # - ( Тука не постои конфликт, па така самата гранката ја споивме со помош на ort strategy односно рекурзивно преку додавање на нов commit > merge bug2, 
+          со овој виртуелен commit bug2 и мастер ќе имаат заеднички предок  )	
+
+21. git push -all origin
+
+22. git checkout bug3
+
+23. git rebase master
+    # - ( Со самата команда ги re-commit-нуваме commits што ги имаме на оваа гранка на некоја друга гранка, во овој случај е master  )
+	    визуелно претставено:		
+                    _____.____._____.main                 _____.____._____.main     
+         пред:                 \___branch1    послe:                      \___branch1'        
+
+24. git checkout master
+
+25. git merge bug3
+    # - ( Тука нема да има конфликти според 23, тука merge-от ќе се изврши со методата fast-forwarding)
+
+26. git push --all origin --force
+
+27. git log > logs.txt
+    # - ( Ги копираме git логови во текстуален фајл )	
+28. git push --all origin	
+
+	
+    

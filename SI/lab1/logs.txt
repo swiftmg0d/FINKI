@@ -1,0 +1,36 @@
+commit 984b8978afd6488722912a4578be6089cf552345
+Author: Zhivche <zhivche.gligorov@gmail.com>
+Date:   Sun Mar 12 18:32:21 2023 +0100
+
+    Fix method sumEvenNumbers
+
+commit 329e1c5a8ae14df0674289335ff2685563fe9629
+Merge: 1ab8a3b 28fde25
+Author: Zhivche <zhivche.gligorov@gmail.com>
+Date:   Sun Mar 12 18:41:06 2023 +0100
+
+    merge bug2
+
+commit 28fde25a53cdc3e6a903fe9c2d17e7f111082a96
+Author: Zhivche <zhivche.gligorov@gmail.com>
+Date:   Sun Mar 12 18:31:20 2023 +0100
+
+    Fix wrong condition in filterOddNumbers
+
+commit 1ab8a3bf9b05d4e415dc69bb7e0338b75e6b9262
+Author: Zhivche <zhivche.gligorov@gmail.com>
+Date:   Sun Mar 12 18:28:56 2023 +0100
+
+    Fix wrong loop for reading
+
+commit 30c5256cfe00e404534ce8b15a6d5f5f5046b46e
+Author: Zhivche <zhivche.gligorov@gmail.com>
+Date:   Sun Mar 12 18:27:50 2023 +0100
+
+    Add java class
+
+commit d331c2d35b979a5017bfb27a9b5b8a6fd1aa881d
+Author: Zhivche <zhivche.gligorov@gmail.com>
+Date:   Sun Mar 12 18:26:39 2023 +0100
+
+    Initial commit
